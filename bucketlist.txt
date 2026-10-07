@@ -1,0 +1,5 @@
+1. Sleep
+2. Eat
+3. Drink
+4. Play
+5. Study
