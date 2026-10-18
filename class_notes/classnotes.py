@@ -1,0 +1,37 @@
+file= open("classnotes.txt","w")
+file.write("Coding: Stuff")
+file.write("\nMaths: Shapes")
+file.write("\nEnglish: Poems")
+file.write("\nMusic: Annoying and hard stuff")
+file.write("\nScience: Stuff")
+file.close()
+n=int(input("How many letters do you want to preview: "))
+file=open("classnotes.txt","r")
+print(file.read(n))
+file.close()
+file=open("classnotes.txt","r")
+lines =file.readlines()
+for i in range(len(lines)):
+    print(i+1,"->",lines[i].strip())
+file.close()
+letter=input("Input the letter at the start of the sentence you want to skip: ")
+file=open("classnotes.txt","r")
+for line in file:
+    if line.startswith(letter.upper()):
+        print("Skip -->>", line.strip())
+    else:
+        print("Keep -->>",line.strip())
+file.close()
+file=open("classnotes.txt","r")
+lines=file.readlines()
+file.close()
+out=open("odd_rows.txt","w")
+for i in range(0, len(lines),2):
+    out.write(lines[i])
+out.close()
+out=open("odd_rows.txt","r")
+lines=out.readlines()
+for i in range(len(lines)):
+    print(i+1,"->",lines[i].strip())
+out.close()
+file.close()
